@@ -94,13 +94,13 @@ def app():
 
     if st.button('Load Dataset'):  
         df = pd.read_csv('Dataset.csv')
-        st.write(df.head(20))
+        st.write(df.head(28))
         st.write('Dataset shape: ')
         st.text(df.shape)
 
         #Randomly select samples
         label_0=df[df['label']==0].sample(n=14)
-        label_1=df[df['label']==1].sample(n=14)
+        label_1=df[df['label']==1].sample(n=13)
 
         train = pd.concat([label_1, label_0])
 
