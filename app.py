@@ -99,8 +99,8 @@ def app():
         st.text(df.shape)
 
         #Randomly select samples
-        label_0=df[df['label']==0].sample(n=16)
-        label_1=df[df['label']==1].sample(n=12)
+        label_0=df[df['label']==0].sample(n=12)
+        label_1=df[df['label']==1].sample(n=16)
 
         train = pd.concat([label_1, label_0])
 
